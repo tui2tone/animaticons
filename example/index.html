@@ -37,12 +37,38 @@
         </li>
       </ul>
     </div>
+    <div class="content-container">
+      <h4 class="heading">Datatable Icons</h4>
+      <ul class="list">
+        <li>
+          <div class="animaticon icon-sorting">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
   <script type="text/javascript">
     $(".animaticon").bind("click", function() {
       $(this).toggleClass("toggle");
+    })
+
+    $(".icon-sorting").bind("click", function() {
+      if(!$(this).hasClass("desc") && !$(this).hasClass("asc")) {
+        $(this).addClass("desc");
+      } else if($(this).hasClass("desc")) {
+        $(this).removeClass("desc");
+        $(this).addClass("asc");
+      } else if($(this).hasClass("asc")) {
+        $(this).removeClass("asc");
+      }
     })
   </script>
 </body>

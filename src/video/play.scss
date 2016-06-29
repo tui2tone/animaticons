@@ -34,18 +34,18 @@ $icon-play-transition: all 0.2s ease;
     &.toggle {
       span:nth-child(1) {
         position: absolute;
-        width: 40%;
+        width: 35%;
         height: 100%;
         background-color: $icon-play-color;
         border-radius: $icon-pause-radius;
         top: 0px;
-        right: 50%;
+        right: 60%;
       }
 
       span:nth-child(2) {
         right: 0;
         position: absolute;
-        width: 40%;
+        width: 35%;
         height: 100%;
         background-color: $icon-play-color;
         border-radius: $icon-pause-radius;

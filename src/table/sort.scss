@@ -1,0 +1,70 @@
+@import '../mixin.scss';
+
+$icon-line-width: 60%;
+$icon-line-height: 12%;
+$icon-play-radius: 2px;
+$icon-play-color: #333;
+$icon-play-transition: all 0.2s ease;
+
+@mixin child($num) {
+  span:nth-child(#{$num}) {
+    @content;
+    background-color: $icon-play-color;
+    border-radius: $icon-play-radius;
+    transition: $icon-play-transition;
+  }
+}
+
+.animaticon {
+  &.icon-sorting {
+    width: 40px;
+    height: 40px;
+    position: relative;
+
+    @include child(1) {
+      @include absolute($left: 35%, $top: 15%, $width: $icon-line-width, $height: $icon-line-height + 2%);
+    }
+
+    @include child(2) {
+      @include absolute($left: 35%, $top: 40%, $width: $icon-line-width - 35%, $height: $icon-line-height + 2%);
+    }
+
+    @include child(3) {
+      @include absolute($left: 35%, $top: 65%, $width: $icon-line-width - 15%, $height: $icon-line-height + 2%);
+    }
+
+    @include child(4) {
+      @include absolute($left: 10%, $top: 10%, $width: $icon-line-height, $height: 60% + $icon-line-height);
+    }
+
+    &.desc {
+
+        @include child(1) {
+            top: 15%;
+        }
+
+        @include child(2) {
+            top: 65%;
+        }
+
+        @include child(3) {
+            top: 40%;
+        }
+    }
+
+    &.asc {
+
+        @include child(1) {
+            top: 65%;
+        }
+
+        @include child(2) {
+            top: 15%;
+        }
+
+        @include child(3) {
+            top: 40%;
+        }
+    }
+  }
+}

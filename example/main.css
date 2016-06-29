@@ -34,11 +34,19 @@ ul.list > li {
   padding: 20px;
 }
 
+ul.list::after {
+  content: '';
+  clear: both;
+  position: relative;
+  display: block;
+}
+
 .animaticon:hover {
   cursor: pointer;
 }
 
 .content-container .heading {
   font-weight: 300;
+  margin-top: 2em;
   margin-bottom: 2em;
 }
