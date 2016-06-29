@@ -27,11 +27,13 @@ ul.list {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 ul.list > li {
   float: left;
-  padding: 20px;
+  padding: 0px 20px;
 }
 
 ul.list::after {
@@ -49,4 +51,17 @@ ul.list::after {
   font-weight: 300;
   margin-top: 2em;
   margin-bottom: 2em;
+}
+
+.content-container .content {
+  background-color: #FFF;
+  border-radius: 2px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 2px #DDD;
+}
+
+.content-container .content .title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: right;
 }
