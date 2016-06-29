@@ -1,0 +1,58 @@
+@import '../mixin.scss';
+
+$icon-play-width: 40px;
+$icon-play-radius: 2px;
+$icon-pause-radius: 2px;
+$icon-play-color: #333;
+$icon-play-transition: all 0.2s ease;
+
+.animaticon {
+  &.icon-play {
+    width: $icon-play-width;
+    height: $icon-play-width;
+    position: relative;
+
+    span:nth-child(1) {
+      @include absolute($right: 90%, $width: $icon-play-radius);
+      background-color: $icon-play-color;
+      border-radius: $icon-play-radius;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      transition: $icon-play-transition;
+    }
+
+    span:nth-child(2) {
+      @include absolute($right: 20%);
+      background-color: $icon-play-color;
+      border-radius: $icon-play-radius * 3;
+      transition: $icon-play-transition;
+      transform: rotate(45deg);
+      -webkit-clip-path: polygon(100% 0, 0 29%,71% 100%);
+      clip-path: polygon(100% 0, 0 28%, 72% 100%);
+    }
+
+    &.toggle {
+      span:nth-child(1) {
+        position: absolute;
+        width: 40%;
+        height: 100%;
+        background-color: $icon-play-color;
+        border-radius: $icon-pause-radius;
+        top: 0px;
+        right: 50%;
+      }
+
+      span:nth-child(2) {
+        right: 0;
+        position: absolute;
+        width: 40%;
+        height: 100%;
+        background-color: $icon-play-color;
+        border-radius: $icon-pause-radius;
+        transform: rotate(0deg);
+        -webkit-clip-path: none;
+        clip-path: none;
+      }
+    }
+  }
+}

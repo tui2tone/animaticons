@@ -2,6 +2,7 @@
   "name": "animaticons",
   "private": true,
   "devDependencies": {
+    "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-notify": "^2.2.0",

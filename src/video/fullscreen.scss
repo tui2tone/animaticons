@@ -1,0 +1,90 @@
+@import '../mixin.scss';
+
+$icon-line-width: 40%;
+$icon-line-height: 12%;
+$icon-play-radius: 2px;
+$icon-play-color: #333;
+$icon-play-transition: all 0.2s ease;
+
+@mixin child($num) {
+  span:nth-child(#{$num}) {
+    @content;
+    background-color: $icon-play-color;
+    border-radius: $icon-play-radius;
+    transition: $icon-play-transition;
+  }
+}
+
+.animaticon {
+  &.icon-fullscreen {
+    width: 40px;
+    height: 40px;
+    position: relative;
+
+    @include child(1) {
+      @include absolute($left: 0%, $top: 0, $width: $icon-line-width, $height: $icon-line-height);
+    }
+
+    @include child(2) {
+      @include absolute($left: 0%, $top: 0, $width: $icon-line-height, $height: $icon-line-width);
+    }
+
+    @include child(3) {
+      @include absolute($right: 0%, $top: 0, $width: $icon-line-width, $height: $icon-line-height);
+    }
+
+    @include child(4) {
+      @include absolute($right: 0%, $top: 0, $width: $icon-line-height, $height: $icon-line-width);
+    }
+
+    @include child(5) {
+      @include absolute($right: 0%, $bottom: 0, $width: $icon-line-width, $height: $icon-line-height);
+    }
+
+    @include child(6) {
+      @include absolute($right: 0%, $bottom: 0, $width: $icon-line-height, $height: $icon-line-width);
+    }
+
+    @include child(7) {
+      @include absolute($left: 0%, $bottom: 0, $width: $icon-line-width, $height: $icon-line-height);
+    }
+
+    @include child(8) {
+      @include absolute($left: 0%, $bottom: 0, $width: $icon-line-height, $height: $icon-line-width);
+    }
+
+    &.toggle {
+      @include child(1) {
+        @include absolute($left: 0%, $top: $icon-line-width - $icon-line-height, $width: $icon-line-width, $height: $icon-line-height);
+      }
+
+      @include child(2) {
+        @include absolute($left: $icon-line-width - $icon-line-height, $top: 0, $width: $icon-line-height, $height: $icon-line-width);
+      }
+
+      @include child(3) {
+        @include absolute($right: 0%, $top: $icon-line-width - $icon-line-height, $width: $icon-line-width, $height: $icon-line-height);
+      }
+
+      @include child(4) {
+        @include absolute($right: $icon-line-width - $icon-line-height, $top: 0, $width: $icon-line-height, $height: $icon-line-width);
+      }
+
+      @include child(5) {
+        @include absolute($right: 0%, $bottom: $icon-line-width - $icon-line-height, $width: $icon-line-width, $height: $icon-line-height);
+      }
+
+      @include child(6) {
+        @include absolute($right: $icon-line-width - $icon-line-height, $bottom: 0, $width: $icon-line-height, $height: $icon-line-width);
+      }
+
+      @include child(7) {
+        @include absolute($left: 0%, $bottom: $icon-line-width - $icon-line-height, $width: $icon-line-width, $height: $icon-line-height);
+      }
+
+      @include child(8) {
+        @include absolute($left: $icon-line-width - $icon-line-height, $bottom: 0, $width: $icon-line-height, $height: $icon-line-width);
+      }
+    }
+  }
+}
