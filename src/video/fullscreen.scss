@@ -2,7 +2,7 @@
 
 $icon-line-width: 40%;
 $icon-line-height: 12%;
-$icon-play-radius: 2px;
+$icon-play-radius: 1px;
 $icon-play-color: #333;
 $icon-play-transition: all 0.2s ease;
 
@@ -16,7 +16,7 @@ $icon-play-transition: all 0.2s ease;
 }
 
 .animaticon {
-  &.icon-fullscreen {
+  &.ai-fullscreen {
     width: 40px;
     height: 40px;
     position: relative;
@@ -53,7 +53,7 @@ $icon-play-transition: all 0.2s ease;
       @include absolute($left: 0%, $bottom: 0, $width: $icon-line-height, $height: $icon-line-width);
     }
 
-    &.toggle {
+    &.--toggle {
       @include child(1) {
         @include absolute($left: 0%, $top: $icon-line-width - $icon-line-height, $width: $icon-line-width, $height: $icon-line-height);
       }

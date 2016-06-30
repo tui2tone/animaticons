@@ -1,0 +1,161 @@
+@import '../mixin.scss';
+
+$icon-line-height: 30%;
+$icon-line-width: 10%;
+$icon-play-radius: 1px;
+$icon-play-color: #333;
+$icon-play-duration: 0.6s;
+$icon-play-transition: all 0.2s ease;
+
+@mixin child($num) {
+  span:nth-child(#{$num}) {
+    background-color: $icon-play-color;
+    border-radius: $icon-play-radius;
+    transition: $icon-play-transition;
+    transform: translate(-50%, -50%);
+    @content;
+  }
+}
+
+@mixin ai-loading-success-animate-child1() {
+  0% {
+    height: $icon-line-height;
+  }
+  20% {
+    height: $icon-line-height;
+  }
+  50% {
+    height: $icon-line-height + 30%;
+  }
+  80% {
+    height: $icon-line-height;
+  }
+  100% {
+    height: $icon-line-height;
+  }
+}
+@-webkit-keyframes ai-loading-success-animate-child1 {
+  @include ai-loading-success-animate-child1;
+}
+@keyframes ai-loading-success-animate-child1 {
+  @include ai-loading-success-animate-child1;
+}
+
+@mixin ai-loading-success-animate-child1-in() {
+  0% {
+    height: $icon-line-height;
+    transform: rotate(0deg);
+  }
+  100% {
+    height: $icon-line-height;
+    transform: rotate(-45deg);
+  }
+}
+@-webkit-keyframes ai-loading-success-animate-child1-in {
+  @include ai-loading-success-animate-child1-in;
+}
+@keyframes ai-loading-success-animate-child1-in {
+  @include ai-loading-success-animate-child1-in;
+}
+
+@mixin ai-loading-success-animate-child2-in() {
+  0% {
+    height: $icon-line-height;
+    transform: rotate(0deg);
+  }
+  100% {
+    height: $icon-line-height + 40%;
+    transform: rotate(45deg);
+  }
+}
+@-webkit-keyframes ai-loading-success-animate-child2-in {
+  @include ai-loading-success-animate-child2-in;
+}
+@keyframes ai-loading-success-animate-child2-in {
+  @include ai-loading-success-animate-child2-in;
+}
+
+.animaticon {
+  &.ai-loading-success {
+    width: 60px;
+    height: 60px;
+    position: relative;
+
+    @include child(1) {
+      @include absolute($left: 20%, $top: 50%, $width: $icon-line-width, $height: $icon-line-height);
+      -webkit-animation: ai-loading-success-animate-child1 $icon-play-duration infinite;
+      animation: ai-loading-success-animate-child1 $icon-play-duration infinite;
+      -webkit-animation-delay: 0;
+      animation-delay: 0;
+    }
+
+    @include child(2) {
+      @include absolute($left: 35%, $top: 50%, $width: $icon-line-width, $height: $icon-line-height);
+      -webkit-animation: ai-loading-success-animate-child1 $icon-play-duration infinite;
+      animation: ai-loading-success-animate-child1 $icon-play-duration infinite;
+      -webkit-animation-delay: $icon-play-duration/5;
+      animation-delay: $icon-play-duration/5;
+    }
+
+    @include child(3) {
+      @include absolute($left: 50%, $top: 50%, $width: $icon-line-width, $height: $icon-line-height);
+      -webkit-animation: ai-loading-success-animate-child1 $icon-play-duration infinite;
+      animation: ai-loading-success-animate-child1 $icon-play-duration infinite;
+      -webkit-animation-delay: ($icon-play-duration/5) * 2;
+      animation-delay: ($icon-play-duration/5) * 2;
+    }
+
+    @include child(4) {
+      @include absolute($left: 65%, $top: 50%, $width: $icon-line-width, $height: $icon-line-height);
+      -webkit-animation: ai-loading-success-animate-child1 $icon-play-duration infinite;
+      animation: ai-loading-success-animate-child1 $icon-play-duration infinite;
+      -webkit-animation-delay: ($icon-play-duration/5) * 3;
+      animation-delay: ($icon-play-duration/5) * 3;
+    }
+
+    @include child(5) {
+      @include absolute($left: 80%, $top: 50%, $width: $icon-line-width, $height: $icon-line-height);
+      -webkit-animation: ai-loading-success-animate-child1 $icon-play-duration infinite;
+      animation: ai-loading-success-animate-child1 $icon-play-duration infinite;
+      -webkit-animation-delay: ($icon-play-duration/5) * 4;
+      animation-delay: ($icon-play-duration/5) * 4;
+    }
+
+    &.--toggle {
+      @include child(1) {
+        @include absolute($left: 20%, $top: 50%, $width: $icon-line-width, $height: $icon-line-height);
+        -webkit-animation: ai-loading-success-animate-child1-in $icon-play-duration 1;
+        animation: ai-loading-success-animate-child1-in $icon-play-duration 1;
+        transform: rotate(-45deg);
+        background-color: #2CC990;
+      }
+
+      @include child(2) {
+        @include absolute($left: 35%, $top: 50%, $width: $icon-line-width, $height: $icon-line-height + 40%);
+        -webkit-animation: ai-loading-success-animate-child2-in $icon-play-duration 1;
+        animation: ai-loading-success-animate-child2-in $icon-play-duration 1;
+        transform: rotate(45deg);
+        transform-origin: 550% 50%;
+        background-color: #2CC990;
+      }
+
+      @include child(3) {
+        @include absolute($left: 50%, $top: 50%, $width: $icon-line-width, $height: 0);
+        -webkit-animation: none;
+        animation: none;
+      }
+
+      @include child(4) {
+        @include absolute($left: 65%, $top: 50%, $width: $icon-line-width, $height: 0);
+        -webkit-animation: none;
+        animation: none;
+      }
+
+      @include child(5) {
+        @include absolute($left: 80%, $top: 50%, $width: $icon-line-width, $height: 0);
+        -webkit-animation: none;
+        animation: none;
+      }
+    }
+  }
+}

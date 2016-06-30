@@ -1,13 +1,13 @@
 @import '../mixin.scss';
 
 $icon-play-width: 40px;
-$icon-play-radius: 2px;
-$icon-pause-radius: 2px;
+$icon-play-radius: 1px;
+$icon-pause-radius: 1px;
 $icon-play-color: #333;
 $icon-play-transition: all 0.2s ease;
 
 .animaticon {
-  &.icon-play {
+  &.ai-play {
     width: $icon-play-width;
     height: $icon-play-width;
     position: relative;
@@ -31,7 +31,7 @@ $icon-play-transition: all 0.2s ease;
       clip-path: polygon(100% 0, 0 28%, 72% 100%);
     }
 
-    &.toggle {
+    &.--toggle {
       span:nth-child(1) {
         position: absolute;
         width: 35%;

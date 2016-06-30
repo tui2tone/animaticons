@@ -1,6 +1,6 @@
 @import '../mixin.scss';
 
-$icon-play-radius: 2px;
+$icon-play-radius: 1px;
 $icon-play-color: #333;
 $icon-play-duration: 0.5s;
 $icon-play-transition: all $icon-play-duration ease;
@@ -14,7 +14,7 @@ $icon-play-transition: all $icon-play-duration ease;
   }
 }
 
-@mixin animate-child1() {
+@mixin ai-gridlist-animate-child1() {
   0% {
     @include absolute($left: 0%, $top: 0, $width: 45%, $height: 45%);
   }
@@ -28,14 +28,14 @@ $icon-play-transition: all $icon-play-duration ease;
     @include absolute($left: 0%, $top: 0, $width: 100%, $height: 22%);
   }
 }
-@-webkit-keyframes icon-gridview2-animation-child1 {
-  @include animate-child1;
+@-webkit-keyframes ai-gridlist-animate-child1 {
+  @include ai-gridlist-animate-child1;
 }
-@keyframes icon-gridview2-animation-child1 {
-  @include animate-child1;
+@keyframes ai-gridlist-animate-child1 {
+  @include ai-gridlist-animate-child1;
 }
 
-@mixin animate-child1-out() {
+@mixin ai-gridlist-animate-child1-out() {
   0% {
     @include absolute($left: 0%, $top: 0, $width: 100%, $height: 22%);
   }
@@ -49,14 +49,14 @@ $icon-play-transition: all $icon-play-duration ease;
     @include absolute($left: 0%, $top: 0, $width: 45%, $height: 45%);
   }
 }
-@-webkit-keyframes icon-gridview2-animation-child1-out {
-  @include animate-child1-out;
+@-webkit-keyframes ai-gridlist-animate-child1-out {
+  @include ai-gridlist-animate-child1-out;
 }
-@keyframes icon-gridview2-animation-child1-out {
-  @include animate-child1-out;
+@keyframes ai-gridlist-animate-child1-out {
+  @include ai-gridlist-animate-child1-out;
 }
 
-@mixin animate-child2() {
+@mixin ai-gridlist-animate-child2() {
   0% {
     @include absolute($left: 0%, $bottom: 0, $width: 45%, $height: 45%);
   }
@@ -70,14 +70,14 @@ $icon-play-transition: all $icon-play-duration ease;
     @include absolute($left: 0%, $bottom: 0%, $width: 100%, $height: 22%);
   }
 }
-@-webkit-keyframes icon-gridview2-animation-child2 {
-  @include animate-child2;
+@-webkit-keyframes ai-gridlist-animate-child2 {
+  @include ai-gridlist-animate-child2;
 }
-@keyframes icon-gridview2-animation-child2 {
-  @include animate-child2;
+@keyframes ai-gridlist-animate-child2 {
+  @include ai-gridlist-animate-child2;
 }
 
-@mixin animate-child2-out() {
+@mixin ai-gridlist-animate-child2-out() {
   0% {
     @include absolute($left: 0%, $bottom: 0, $width: 100%, $height: 22%);
   }
@@ -91,14 +91,14 @@ $icon-play-transition: all $icon-play-duration ease;
     @include absolute($left: 0%, $bottom: 0, $width: 45%, $height: 45%);
   }
 }
-@-webkit-keyframes icon-gridview2-animation-child2-out {
-  @include animate-child2-out;
+@-webkit-keyframes ai-gridlist-animate-child2-out {
+  @include ai-gridlist-animate-child2-out;
 }
-@keyframes icon-gridview2-animation-child2-out {
-  @include animate-child2-out;
+@keyframes ai-gridlist-animate-child2-out {
+  @include ai-gridlist-animate-child2-out;
 }
 
-@mixin animate-child3() {
+@mixin ai-gridlist-animate-child3() {
   0% {
     @include absolute($right: 0%, $top: 0, $width: 45%, $height: 45%);
   }
@@ -112,14 +112,14 @@ $icon-play-transition: all $icon-play-duration ease;
     @include absolute($right: 0%, $top: 39%, $width: 100%, $height: 22%);
   }
 }
-@-webkit-keyframes icon-gridview2-animation-child3 {
-  @include animate-child3;
+@-webkit-keyframes ai-gridlist-animate-child3 {
+  @include ai-gridlist-animate-child3;
 }
-@keyframes icon-gridview2-animation-child3 {
-  @include animate-child3;
+@keyframes ai-gridlist-animate-child3 {
+  @include ai-gridlist-animate-child3;
 }
 
-@mixin animate-child3-out() {
+@mixin ai-gridlist-animate-child3-out() {
   0% {
     @include absolute($right: 0%, $top: 39%, $width: 100%, $height: 22%);
   }
@@ -133,15 +133,15 @@ $icon-play-transition: all $icon-play-duration ease;
     @include absolute($right: 0%, $top: 0, $width: 45%, $height: 45%);
   }
 }
-@-webkit-keyframes icon-gridview2-animation-child3-out {
-  @include animate-child3-out;
+@-webkit-keyframes ai-gridlist-animate-child3-out {
+  @include ai-gridlist-animate-child3-out;
 }
-@keyframes icon-gridview2-animation-child3-out {
-  @include animate-child3-out;
+@keyframes ai-gridlist-animate-child3-out {
+  @include ai-gridlist-animate-child3-out;
 }
 
 
-@mixin animate-child4() {
+@mixin ai-gridlist-animate-child4() {
   0% {
     @include absolute($right: 0%, $bottom: 0, $width: 45%, $height: 45%);
   }
@@ -152,14 +152,14 @@ $icon-play-transition: all $icon-play-duration ease;
     @include absolute($right: 0%, $bottom: 39%, $width: 100%, $height: 22%);
   }
 }
-@-webkit-keyframes icon-gridview2-animation-child4 {
-  @include animate-child4;
+@-webkit-keyframes ai-gridlist-animate-child4 {
+  @include ai-gridlist-animate-child4;
 }
-@keyframes icon-gridview2-animation-child4 {
-  @include animate-child4;
+@keyframes ai-gridlist-animate-child4 {
+  @include ai-gridlist-animate-child4;
 }
 
-@mixin animate-child4-out() {
+@mixin ai-gridlist-animate-child4-out() {
   0% {
     @include absolute($right: 0%, $bottom: 39%, $width: 100%, $height: 22%);
   }
@@ -173,11 +173,11 @@ $icon-play-transition: all $icon-play-duration ease;
     @include absolute($right: 0%, $bottom: 0, $width: 45%, $height: 45%);
   }
 }
-@-webkit-keyframes icon-gridview2-animation-child4-out {
-  @include animate-child4-out;
+@-webkit-keyframes ai-gridlist-animate-child4-out {
+  @include ai-gridlist-animate-child4-out;
 }
-@keyframes icon-gridview2-animation-child4-out {
-  @include animate-child4-out;
+@keyframes ai-gridlist-animate-child4-out {
+  @include ai-gridlist-animate-child4-out;
 }
 
 
@@ -190,51 +190,51 @@ $icon-play-transition: all $icon-play-duration ease;
 
     @include child(1) {
       @include absolute($left: 0%, $top: 0, $width: 45%, $height: 45%);
-      -webkit-animation: icon-gridview2-animation-child1-out $icon-play-duration 1;
-      animation: icon-gridview2-animation-child1-out $icon-play-duration 1;
+      -webkit-animation: ai-gridlist-animate-child1-out $icon-play-duration 1;
+      animation: ai-gridlist-animate-child1-out $icon-play-duration 1;
     }
 
     @include child(2) {
       @include absolute($left: 0%, $bottom: 0, $width: 45%, $height: 45%);
-      -webkit-animation: icon-gridview2-animation-child2-out $icon-play-duration 1;
-      animation: icon-gridview2-animation-child2-out $icon-play-duration 1;
+      -webkit-animation: ai-gridlist-animate-child2-out $icon-play-duration 1;
+      animation: ai-gridlist-animate-child2-out $icon-play-duration 1;
     }
 
     @include child(3) {
       @include absolute($right: 0%, $top: 0, $width: 45%, $height: 45%);
-      -webkit-animation: icon-gridview2-animation-child3-out $icon-play-duration 1;
-      animation: icon-gridview2-animation-child3-out $icon-play-duration 1;
+      -webkit-animation: ai-gridlist-animate-child3-out $icon-play-duration 1;
+      animation: ai-gridlist-animate-child3-out $icon-play-duration 1;
     }
 
     @include child(4) {
       @include absolute($right: 0%, $bottom: 0, $width: 45%, $height: 45%);
-      -webkit-animation: icon-gridview2-animation-child4-out $icon-play-duration 1;
-      animation: icon-gridview2-animation-child4-out $icon-play-duration 1;
+      -webkit-animation: ai-gridlist-animate-child4-out $icon-play-duration 1;
+      animation: ai-gridlist-animate-child4-out $icon-play-duration 1;
     }
 
     &.--toggle {
       @include child(1) {
         @include absolute($left: 0%, $top: 0, $width: 100%, $height: 22%);
-        -webkit-animation: icon-gridview2-animation-child1 $icon-play-duration 1;
-        animation: icon-gridview2-animation-child1 $icon-play-duration 1;
+        -webkit-animation: ai-gridlist-animate-child1 $icon-play-duration 1;
+        animation: ai-gridlist-animate-child1 $icon-play-duration 1;
       }
 
       @include child(2) {
         @include absolute($left: 0%, $bottom: 0%, $width: 100%, $height: 22%);
-        -webkit-animation: icon-gridview2-animation-child2 $icon-play-duration 1;
-        animation: icon-gridview2-animation-child2 $icon-play-duration 1;
+        -webkit-animation: ai-gridlist-animate-child2 $icon-play-duration 1;
+        animation: ai-gridlist-animate-child2 $icon-play-duration 1;
       }
 
       @include child(3) {
         @include absolute($right: 0%, $top: 39%, $width: 100%, $height: 22%);
-        -webkit-animation: icon-gridview2-animation-child3 $icon-play-duration 1;
-        animation: icon-gridview2-animation-child3 $icon-play-duration 1;
+        -webkit-animation: ai-gridlist-animate-child3 $icon-play-duration 1;
+        animation: ai-gridlist-animate-child3 $icon-play-duration 1;
       }
 
       @include child(4) {
         @include absolute($right: 0%, $bottom: 0, $width: 0%, $height: 0%);
-        -webkit-animation: icon-gridview2-animation-child4 $icon-play-duration 1;
-        animation: icon-gridview2-animation-child4 $icon-play-duration 1;
+        -webkit-animation: ai-gridlist-animate-child4 $icon-play-duration 1;
+        animation: ai-gridlist-animate-child4 $icon-play-duration 1;
       }
     }
   }
