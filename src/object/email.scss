@@ -18,25 +18,25 @@ $icon-play-transition: all 0.2s ease;
 
 .animaticon {
   &.ai-email {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     position: relative;
 
     @include child(1) {
-      @include absolute($left: 5%, $top: 30%, $width: $icon-width, $height: $icon-height);
+      @include absolute($left: 5%, $top: 20%, $width: $icon-width, $height: $icon-height);
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
 
     @include child(2) {
-      @include absolute($left: 10%, $top: 10%, $width: $icon-width - 10%, $height: $icon-height);
+      @include absolute($left: 10%, $top: 5%, $width: $icon-width - 10%, $height: $icon-height - 10%);
       border-radius: 2px;
       background-color: #AAA;
       z-index: 1009;
     }
 
     @include child(3) {
-      @include absolute($left: 5%, $top: 30%, $width: $icon-width, $height: $icon-height);
+      @include absolute($left: 5%, $top: 20%, $width: $icon-width, $height: $icon-height);
       border-radius: $icon-play-radius;
       -webkit-clip-path: polygon(100% 100%, 0 100%, 50% 50%);
       clip-path: polygon(100% 100%, 0 100%, 50% 50%);
@@ -45,7 +45,7 @@ $icon-play-transition: all 0.2s ease;
     }
 
     @include child(6) {
-      @include absolute($left: 5%, $top: 30%, $width: $icon-width, $height: $icon-height);
+      @include absolute($left: 5%, $top: 20%, $width: $icon-width, $height: $icon-height);
       border-radius: 0;
       -webkit-clip-path: polygon(100% 0, 0 0, 50% 60%);
       clip-path: polygon(100% 0, 0 0, 50% 60%);
@@ -56,7 +56,7 @@ $icon-play-transition: all 0.2s ease;
     }
 
     @include child(4) {
-      @include absolute($left: 5%, $top: 30%, $width: $icon-width, $height: $icon-height);
+      @include absolute($left: 5%, $top: 20%, $width: $icon-width, $height: $icon-height);
       border-radius: $icon-play-radius;
       border-top-left-radius: 0;
       -webkit-clip-path: polygon(0 100%, 0 0, 50% 50%);
@@ -66,7 +66,7 @@ $icon-play-transition: all 0.2s ease;
     }
 
     @include child(5) {
-      @include absolute($left: 5%, $top: 30%, $width: $icon-width, $height: $icon-height);
+      @include absolute($left: 5%, $top: 20%, $width: $icon-width, $height: $icon-height);
       border-radius: $icon-play-radius;
       border-top-right-radius: 0;
       -webkit-clip-path: polygon(100% 100%, 100% 0, 50% 50%);
