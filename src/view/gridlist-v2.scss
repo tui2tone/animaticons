@@ -1,0 +1,178 @@
+@import '../mixin.scss';
+
+$icon-play-radius: 2px;
+$icon-play-color: #333;
+$icon-play-duration: 0.3s;
+$icon-play-transition: all $icon-play-duration ease;
+
+@mixin child($num) {
+  span:nth-child(#{$num}) {
+    @content;
+    background-color: $icon-play-color;
+    border-radius: $icon-play-radius;
+    transition: $icon-play-transition;
+  }
+}
+
+@mixin ai-gridlist-v2-animate-child1() {
+  0% {
+    @include absolute($left: 0%, $top: 0, $width: 45%, $height: 45%);
+  }
+  50% {
+    @include absolute($left: 0%, $top: 0, $width: 45%, $height: 22%);
+  }
+  100% {
+    @include absolute($left: 0%, $top: 0, $width: 100%, $height: 22%);
+  }
+}
+@-webkit-keyframes ai-gridlist-v2-animate-child1 {
+  @include ai-gridlist-v2-animate-child1;
+}
+@keyframes ai-gridlist-v2-animate-child1 {
+  @include ai-gridlist-v2-animate-child1;
+}
+
+@mixin ai-gridlist-v2-animate-child1-out() {
+  0% {
+    @include absolute($left: 0%, $top: 0, $width: 100%, $height: 22%);
+  }
+  50% {
+    @include absolute($left: 0%, $top: 0, $width: 45%, $height: 22%);
+  }
+  100% {
+    @include absolute($left: 0%, $top: 0, $width: 45%, $height: 45%);
+  }
+}
+@-webkit-keyframes ai-gridlist-v2-animate-child1-out {
+  @include ai-gridlist-v2-animate-child1-out;
+}
+@keyframes ai-gridlist-v2-animate-child1-out {
+  @include ai-gridlist-v2-animate-child1-out;
+}
+
+@mixin ai-gridlist-v2-animate-child2() {
+  0% {
+    @include absolute($left: 0%, $bottom: 0, $width: 45%, $height: 45%);
+  }
+  50% {
+    @include absolute($left: 0%, $bottom: 0%, $width: 45%, $height: 22%);
+  }
+  100% {
+    @include absolute($left: 0%, $bottom: 0%, $width: 100%, $height: 22%);
+  }
+}
+@-webkit-keyframes ai-gridlist-v2-animate-child2 {
+  @include ai-gridlist-v2-animate-child2;
+}
+@keyframes ai-gridlist-v2-animate-child2 {
+  @include ai-gridlist-v2-animate-child2;
+}
+
+@mixin ai-gridlist-v2-animate-child2-out() {
+  0% {
+    @include absolute($left: 0%, $bottom: 0, $width: 100%, $height: 22%);
+  }
+  50% {
+    @include absolute($left: 0%, $bottom: 0, $width: 45%, $height: 22%);
+  }
+  100% {
+    @include absolute($left: 0%, $bottom: 0, $width: 45%, $height: 45%);
+  }
+}
+@-webkit-keyframes ai-gridlist-v2-animate-child2-out {
+  @include ai-gridlist-v2-animate-child2-out;
+}
+@keyframes ai-gridlist-v2-animate-child2-out {
+  @include ai-gridlist-v2-animate-child2-out;
+}
+
+@mixin ai-gridlist-v2-animate-child3() {
+  0% {
+    @include absolute($right: 0%, $top: 0, $width: 45%, $height: 45%);
+  }
+  50% {
+    @include absolute($right: 0%, $top: 39%, $width: 45%, $height: 22%);
+  }
+  100% {
+    @include absolute($right: 0%, $top: 39%, $width: 100%, $height: 22%);
+  }
+}
+@-webkit-keyframes ai-gridlist-v2-animate-child3 {
+  @include ai-gridlist-v2-animate-child3;
+}
+@keyframes ai-gridlist-v2-animate-child3 {
+  @include ai-gridlist-v2-animate-child3;
+}
+
+@mixin ai-gridlist-v2-animate-child3-out() {
+  0% {
+    @include absolute($right: 0%, $top: 39%, $width: 100%, $height: 22%);
+  }
+  50% {
+    @include absolute($right: 0%, $top: 39%, $width: 45%, $height: 22%);
+  }
+  100% {
+    @include absolute($right: 0%, $top: 0, $width: 45%, $height: 45%);
+  }
+}
+@-webkit-keyframes ai-gridlist-v2-animate-child3-out {
+  @include ai-gridlist-v2-animate-child3-out;
+}
+@keyframes ai-gridlist-v2-animate-child3-out {
+  @include ai-gridlist-v2-animate-child3-out;
+}
+
+
+.animaticon {
+  &.ai-gridlist-v2 {
+    width: 40px;
+    height: 40px;
+    position: relative;
+
+    @include child(1) {
+      @include absolute($left: 0%, $top: 0, $width: 45%, $height: 45%);
+      -webkit-animation: ai-gridlist-v2-animate-child1-out $icon-play-duration 1;
+      animation: ai-gridlist-v2-animate-child1-out $icon-play-duration 1;
+    }
+
+    @include child(2) {
+      @include absolute($left: 0%, $bottom: 0, $width: 45%, $height: 45%);
+      -webkit-animation: ai-gridlist-v2-animate-child2-out $icon-play-duration 1;
+      animation: ai-gridlist-v2-animate-child2-out $icon-play-duration 1;
+    }
+
+    @include child(3) {
+      @include absolute($right: 0%, $top: 0, $width: 45%, $height: 45%);
+      -webkit-animation: ai-gridlist-v2-animate-child3-out $icon-play-duration 1;
+      animation: ai-gridlist-v2-animate-child3-out $icon-play-duration 1;
+    }
+
+    @include child(4) {
+      @include absolute($right: 0%, $bottom: 0, $width: 45%, $height: 45%);
+    }
+
+    &.--toggle {
+      @include child(1) {
+        @include absolute($left: 0%, $top: 0, $width: 100%, $height: 22%);
+        -webkit-animation: ai-gridlist-v2-animate-child1 $icon-play-duration 1;
+        animation: ai-gridlist-v2-animate-child1 $icon-play-duration 1;
+      }
+
+      @include child(2) {
+        @include absolute($left: 0%, $bottom: 0%, $width: 100%, $height: 22%);
+        -webkit-animation: ai-gridlist-v2-animate-child2 $icon-play-duration 1;
+        animation: ai-gridlist-v2-animate-child2 $icon-play-duration 1;
+      }
+
+      @include child(3) {
+        @include absolute($right: 0%, $top: 39%, $width: 100%, $height: 22%);
+        -webkit-animation: ai-gridlist-v2-animate-child3 $icon-play-duration 1;
+        animation: ai-gridlist-v2-animate-child3 $icon-play-duration 1;
+      }
+
+      @include child(4) {
+        @include absolute($right: 0%, $bottom: 0, $width: 0%, $height: 0%);
+      }
+    }
+  }
+}
