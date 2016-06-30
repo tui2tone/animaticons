@@ -1,0 +1,89 @@
+@import '../mixin.scss';
+
+$icon-height: 60%;
+$icon-width: 90%;
+$icon-play-radius: 3px;
+$icon-play-color: #333;
+$icon-play-duration: 0.6s;
+$icon-play-transition: all 0.2s ease;
+
+@mixin child($num) {
+  span:nth-child(#{$num}) {
+    background-color: $icon-play-color;
+    border-radius: $icon-play-radius;
+    transition: $icon-play-transition;
+    @content;
+  }
+}
+
+.animaticon {
+  &.ai-email {
+    width: 60px;
+    height: 60px;
+    position: relative;
+
+    @include child(1) {
+      @include absolute($left: 5%, $top: 30%, $width: $icon-width, $height: $icon-height);
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    @include child(2) {
+      @include absolute($left: 10%, $top: 10%, $width: $icon-width - 10%, $height: $icon-height);
+      border-radius: 2px;
+      background-color: #AAA;
+      z-index: 1009;
+    }
+
+    @include child(3) {
+      @include absolute($left: 5%, $top: 30%, $width: $icon-width, $height: $icon-height);
+      border-radius: $icon-play-radius;
+      -webkit-clip-path: polygon(100% 100%, 0 100%, 50% 50%);
+      clip-path: polygon(100% 100%, 0 100%, 50% 50%);
+      background-color: #555;
+      z-index: 1010;
+    }
+
+    @include child(6) {
+      @include absolute($left: 5%, $top: 30%, $width: $icon-width, $height: $icon-height);
+      border-radius: 0;
+      -webkit-clip-path: polygon(100% 0, 0 0, 50% 60%);
+      clip-path: polygon(100% 0, 0 0, 50% 60%);
+      transform: rotateX(180deg);
+      transform-origin: 0 0;
+      background-color: #222;
+      z-index: 1008;
+    }
+
+    @include child(4) {
+      @include absolute($left: 5%, $top: 30%, $width: $icon-width, $height: $icon-height);
+      border-radius: $icon-play-radius;
+      border-top-left-radius: 0;
+      -webkit-clip-path: polygon(0 100%, 0 0, 50% 50%);
+      clip-path: polygon(0 100%, 0 0, 50% 50%);
+      background-color: #444;
+      z-index: 1010;
+    }
+
+    @include child(5) {
+      @include absolute($left: 5%, $top: 30%, $width: $icon-width, $height: $icon-height);
+      border-radius: $icon-play-radius;
+      border-top-right-radius: 0;
+      -webkit-clip-path: polygon(100% 100%, 100% 0, 50% 50%);
+      clip-path: polygon(100% 100%, 100% 0, 50% 50%);
+      background-color: #444;
+      z-index: 1010;
+    }
+
+    &.--toggle {
+      @include child(2) {
+        top: 30%;
+      }
+
+      @include child(6) {
+        transform: rotateX(0deg);
+        z-index: 1011;
+      }
+    }
+  }
+}
