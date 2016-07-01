@@ -1,6 +1,6 @@
 @import '../mixin.scss';
 
-$icon-height: 60%;
+$icon-height: 50%;
 $icon-width: 90%;
 $icon-play-radius: 3px;
 $icon-play-color: #333;
@@ -24,65 +24,119 @@ $icon-play-transition: all 0.2s ease;
 
     @include child(1) {
       @include absolute($left: 5%, $top: 20%, $width: $icon-width, $height: $icon-height);
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+      background-color: #333;
+      box-shadow: 0px 0px 2px #AAA;
     }
 
     @include child(2) {
-      @include absolute($left: 10%, $top: 5%, $width: $icon-width - 10%, $height: $icon-height - 10%);
+      @include absolute($left: 10%, $top: 5%, $width: $icon-width - 10%, $height: $icon-height);
       border-radius: 2px;
-      background-color: #AAA;
-      z-index: 1009;
+      background-color: #FFF;
+      box-shadow: 0px 0px 1px #333;
+      z-index: 1010;
     }
 
     @include child(3) {
       @include absolute($left: 5%, $top: 20%, $width: $icon-width, $height: $icon-height);
       border-radius: $icon-play-radius;
-      -webkit-clip-path: polygon(100% 100%, 0 100%, 50% 50%);
-      clip-path: polygon(100% 100%, 0 100%, 50% 50%);
-      background-color: #555;
-      z-index: 1010;
-    }
-
-    @include child(6) {
-      @include absolute($left: 5%, $top: 20%, $width: $icon-width, $height: $icon-height);
-      border-radius: 0;
-      -webkit-clip-path: polygon(100% 0, 0 0, 50% 60%);
-      clip-path: polygon(100% 0, 0 0, 50% 60%);
-      transform: rotateX(180deg);
-      transform-origin: 0 0;
-      background-color: #222;
-      z-index: 1008;
+      -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+      clip-path: polygon(0 0, 0% 100%, 100% 100%);
+      background-color: #333;
+      z-index: 1012;
     }
 
     @include child(4) {
       @include absolute($left: 5%, $top: 20%, $width: $icon-width, $height: $icon-height);
-      border-radius: $icon-play-radius;
-      border-top-left-radius: 0;
-      -webkit-clip-path: polygon(0 100%, 0 0, 50% 50%);
-      clip-path: polygon(0 100%, 0 0, 50% 50%);
+      border-radius: 3px;
+      -webkit-clip-path: polygon(100% 100%, 100% 0, 10% 100%);
+      clip-path: polygon(100% 100%, 100% 0, 10% 100%);
       background-color: #444;
-      z-index: 1010;
+      z-index: 1011;
     }
 
     @include child(5) {
       @include absolute($left: 5%, $top: 20%, $width: $icon-width, $height: $icon-height);
-      border-radius: $icon-play-radius;
-      border-top-right-radius: 0;
-      -webkit-clip-path: polygon(100% 100%, 100% 0, 50% 50%);
-      clip-path: polygon(100% 100%, 100% 0, 50% 50%);
-      background-color: #444;
+      border-radius: 3px;
+      -webkit-clip-path: polygon(100% 0, 0 0, 50% 60%);
+      clip-path: polygon(100% 0, 0 0, 50% 60%);
+      transform: rotateX(180deg);
+      transform-origin: 0 0;
+      background-color: #333;
+      z-index: 1009;
+    }
+
+    @include child(6) {
+      @include absolute($left: 5%, $top: 20%, $width: $icon-width, $height: $icon-height);
+      border-radius: 3px;
+      -webkit-clip-path: polygon(100% 0, 0 0, 50% 62%);
+      clip-path: polygon(100% 0, 0 0, 50% 62%);
+      transform: rotateX(180deg);
+      transform-origin: 0 0;
+      background-color: transparent !important;
+      z-index: 1008;
+    }
+
+
+    @include child(7) {
+      @include absolute($left: 20%, $top: 15%, $width: $icon-width - 50%, $height: 4%);
+      border-radius: 2px;
+      background-color: #DDD;
       z-index: 1010;
+      opacity: 1;
+    }
+
+    @include child(8) {
+      @include absolute($left: 20%, $top: 24%, $width: $icon-width - 30%, $height: 4%);
+      border-radius: 2px;
+      background-color: #DDD;
+      z-index: 1010;
+      opacity: 1;
+    }
+
+    @include child(9) {
+      @include absolute($left: 20%, $top: 32%, $width: $icon-width - 30%, $height: 4%);
+      border-radius: 2px;
+      background-color: #DDD;
+      z-index: 1010;
+      opacity: 1;
     }
 
     &.--toggle {
       @include child(2) {
-        top: 30%;
+        @include absolute($left: 10%, $top: 30%, $width: $icon-width - 10%, $height: $icon-height - 20%);
+        background-color: #FFF;
+        z-index: 1010;
+      }
+
+      @include child(4) {
+        background-color: #333;
+      }
+
+      @include child(5) {
+        transform: rotateX(0deg);
+        z-index: 1013;
+        background-color: #444;
       }
 
       @include child(6) {
         transform: rotateX(0deg);
-        z-index: 1011;
+        z-index: 1012;
+        background-color: rgba(0,0,0,0.4) !important;
+      }
+
+      @include child(7) {
+        top: 24%;
+        opacity: 0;
+      }
+
+      @include child(8) {
+        top: 32%;
+        opacity: 0;
+      }
+
+      @include child(9) {
+        top: 40%;
+        opacity: 0;
       }
     }
   }
