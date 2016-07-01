@@ -125,8 +125,8 @@ $icon-play-transition: all $icon-play-duration ease;
 
 .animaticon {
   &.ai-gridlist-v2 {
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
     position: relative;
 
     @include child(1) {
